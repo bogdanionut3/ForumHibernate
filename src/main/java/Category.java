@@ -7,9 +7,9 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer category_id;
-    @OneToMany
+    @ManyToMany
     private List<Topic> topics;
-    @OneToOne
+    @ManyToOne
     private User user;
     @Column(nullable = false)
     private String subject;

@@ -9,7 +9,7 @@ public class Topic {
     private Integer id;
     @OneToOne
     private User user;
-    @OneToMany()
+    @OneToMany
     private List<Post> posts;
     @ManyToOne
     private Category category;
