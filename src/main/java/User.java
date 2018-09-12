@@ -22,6 +22,10 @@ public class User {
         this.password = password;
     }
 
+    public User() {
+    }
+
+
     public String getUsername() {
         return username;
     }
@@ -30,12 +34,19 @@ public class User {
         return id;
     }
 
-    public boolean isThisPasswordMine(String password) {
+    public boolean  isThisPasswordMine(String password) {
         if (this.password.equals(password)) {
             return true;
         } else {
             return false;
         }
+    }
+
+    public boolean isThisUsernameMine(String username){
+        if(this.username.equals(username)){
+            return true;
+        }
+        return false;
     }
 
     @Override

@@ -9,7 +9,7 @@ public class Category {
     private Integer category_id;
     @OneToMany
     private List<Topic> topics;
-    @Column(nullable = false)
+    @OneToOne
     private User user;
     @Column(nullable = false)
     private String subject;
@@ -23,10 +23,16 @@ public class Category {
         this.category_id = category_id;
     }
 
+    public Category() {
+    }
 
 
     public String getSubject() {
         return subject;
+    }
+
+    public int getCategoryId(){
+        return category_id;
     }
 
     @Override
